@@ -1,0 +1,66 @@
+<%- include('./partials/head') %>
+
+    <body>
+        <div id="fundo">
+            <div id="content">
+                <%- include('./partials/header') %>
+                    <br>
+                    <div class="dromedario-new">
+                        <h1 class="fonte1">"Você Perdeu!"</h1>
+                    </div>
+                    <br>
+                    <div id="desempenho">
+                        <div id="infos">
+                            <br>
+                            <p class="fonte2">ACERTOS</p>
+                            <h1 class="numero">
+                                <%=pontuacao%>
+                            </h1>
+                            <p class="fonte2">A resposta era</p>
+                            <p class="fonte2">"<%=resposta%>"</p>
+                        </div>
+                        <div id="new">
+                            <form method="post" action="/jogadores">
+                                <p class="fonte5">Gostou do seu desempenho? Então grave ele na história!</p>
+                                <br>
+                                <div id="formulario">
+                                    <input type="hidden" name="pergunta" value="<%=pergunta%>">
+                                    <input type="hidden" name="pontuacao" value="<%=pontuacao%>">
+                                    <table>
+                                        <tr>
+                                            <td class="label">
+                                                <label for="nome">Nome: </label>
+                                            </td>
+                                            <td class="input">
+                                                <input name="nome" type="text" placeholder="Digite aqui o seu nome..."
+                                                    maxlength="15" required>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="label">
+                                                <label for="comentario">Comentario: </label>
+                                            </td>
+                                            <td class="input">
+                                                <input name="comentario" type="text"
+                                                    placeholder="Digite aqui uma recordação da usa experiência..."
+                                                    maxlength="50" required>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <br>
+                                    <button>SALVAR</button>
+                                    <p>ou</p>
+                                    <a href="/game">
+                                        <p>Clique <b>aqui</b> para apagar esta partida de sua memória</p>
+                                    </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <br>
+                    <%- include('./partials/footer') %>
+            </div>
+        </div>
+    </body>
+
+    </html>

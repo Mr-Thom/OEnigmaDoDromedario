@@ -1,0 +1,54 @@
+<%- include('./partials/head') %>
+
+    <body>
+        <div id="fundo">
+            <div id="content">
+                <%- include('./partials/header') %>
+                <div id="area">
+                    <table id="classificacao">
+                        <% if (jogadores.length> 0) { %>
+                            <tr>
+                                <th>
+                                    <h1 class="fonte1">Nome</h1>
+                                </th>
+                                <th>
+                                    <h1 class="fonte1">Pontuação</h1>
+                                </th>
+                            </tr>
+                            
+                            <% jogadores.forEach(jogador=> { %>
+                                <tr>
+                                    <td class="nome">
+                                            <h3 fonte="fonte2">
+                                                <%= jogador.nome %>
+                                            </h3>
+                                            <hr>
+                                        </td>
+                                    <td class="pontuacao">
+                                        <h3 fonte="fonte2">
+                                            <%= jogador.pontuacao %> Acerto(s)
+                                        </h3>
+                                        <hr>
+                                    </td>
+                                    <td class="button-jogador">
+                                        <a href="jogadores/<%=jogador.id%>">
+                                            <button>SELECIONAR</button>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <% }) %>
+                                    <% } else { %>
+                                        <tr>
+                                            <td>
+                                                <h1 class="fonte1">Não há jogadores salvos</h1>
+                                            </td>
+                                        </tr>
+                                        <% } %>
+                    </table>
+                    </div>
+                    <%- include('./partials/footer') %>
+            </div>
+        </div>
+    </body>
+
+    </html>

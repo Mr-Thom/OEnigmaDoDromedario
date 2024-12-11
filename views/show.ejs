@@ -1,0 +1,42 @@
+<%- include('./partials/head') %>
+
+    <body>
+        <div id="fundo">
+            <div id="content">
+                <%- include('./partials/header') %>
+                    <div>
+                        <div class="dromedario">
+                            <h1 class="fonte1">"Conhece esse?"</h1>
+                        </div>
+                        <div id="jogador">
+                            <h1 class="fonte3">Nome: <h1 class="fonte4">
+                                    <%=jogador.nome%>
+                                </h1>
+                            </h1>
+                            <h1 class="fonte3">Pontuação: <h1 class="fonte4">
+                                    <%=jogador.pontuacao%>
+                                </h1>
+                            </h1>
+                            <h1 class="fonte3">Comentário: <h1 class="fonte4">
+                                    <%=jogador.comentario%>
+                                </h1>
+                            </h1>
+                            <h1 class="fonte3">Última Charada: <h1 class="fonte4">
+                                    <%=jogador.charadaFinal%>
+                                </h1>
+                            </h1>
+                            <br>
+                            <a href="/jogadores/<%= jogador.id %>/edit"><button>Editar</button></a>
+                            <form method="post" action="/jogadores/<%= jogador.id %>?_method=DELETE">
+                                <button>Deletar</button>
+                            </form>
+                            <p>ou</p>
+                            <a href="/jogadores"><button>Voltar</button></a>
+                        </div>
+                    </div>
+                    <%- include('./partials/footer') %>
+            </div>
+        </div>
+    </body>
+
+    </html>

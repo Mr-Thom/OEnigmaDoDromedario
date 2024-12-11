@@ -1,0 +1,404 @@
+@font-face {
+    font-family: numero;
+    src: url("../fonts/Number9.ttf");
+}
+
+@font-face {
+    font-family: arabica;
+    src: url("../fonts/tiza.ttf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#fundo {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../img/fundo.png");
+    background-size: 111%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+#content {
+    height: 100vh;
+    width: 60vw;
+    background-color: rgb(255, 179, 1);
+    margin-left: 20vw;
+    z-index: 1;
+    
+}
+
+#header {
+    height: 15vh;
+    width: 60vw;
+    background-color: rgb(245, 190, 80);
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho{
+    flex: 1;
+    color: rgb(30, 66, 32);
+    font-family: arabica;
+    font-size: 2vh;
+}
+
+.botoesCabecalho{
+    background-color: rgb(250, 209, 114);
+    width: 10vw;
+    height: 7vh;
+    border: none;
+    border-radius: 20%;
+    font-family: arabica;
+    text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
+    margin: 0;
+    font-size: 2.5vh;
+    color: white;
+    padding: 1vw;
+
+}
+
+.botoesCabecalho:hover{
+    cursor: pointer;
+    background-color: rgb(236, 186, 70);
+
+}
+
+#footer {
+    height: 3vh;
+    width: 60vw;
+    background-color: rgb(245, 190, 80);
+    padding-top: 2vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 2vh;
+}
+
+#area{
+    height: 72vh;
+    width: 54vw;
+    margin: 2vw;
+    background-color: rgb(255, 220, 139);
+    border-radius: 3%;
+    padding: 1vh;
+    overflow:auto; 
+}
+
+#classificacao {
+    height: auto;
+    width: 50vw;
+    margin: 1vh 1vw 1vh 1vw;
+    border: 2px;
+    padding: 0;
+    color: white;
+    text-align: left;
+}
+
+.nome {
+    height: 4vh;
+    width: 65%;
+    color: black;
+}
+
+.pontuacao {
+    height: 4vh;
+    width: 25%;
+    color: black;
+}
+
+.button-jogador {
+    height: 4vh;
+    width: 10%;
+    color: black;
+}
+
+#jogador {
+    margin-top: 10vh;
+    height: auto;
+    width: 20vw;
+    margin-right: 6.6vw;
+    float: right;
+    padding: 1vh 1vw 1vh 1vw;
+    border: 1px white solid;
+    border-radius: 1%;
+    text-align: center;
+}
+
+#jogador button {
+    margin-left: 5vw;
+    width: 10vw;
+    margin-bottom: 1vh;
+}
+
+#edit {
+    height: auto;
+    width: 20vw;
+    margin: 20vh 6.6vw 5vh 5vw;
+    float: right;
+    text-align: center;
+}
+
+#edit input {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: rgb(254, 222, 145);
+    border-style: dotted;
+    border-color: rgb(255, 253, 248);
+}
+
+#edit button {
+    margin-left: 5vw;
+    width: 10vw;
+    margin-bottom: 1vh;
+}
+
+#new {
+    height: 12vw;
+    margin-left: 3.33vw;
+    width: 20vw;
+    text-align: center;
+}
+
+.dromedario {
+    height: 5vh;
+    width: 20vw;
+    margin-left: 6.6vw;
+    background-image: url("../img/dromedario.jpg");
+    background-repeat: no-repeat;
+    background-size: 20vw;
+    border: 2px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 100%;
+    float: left;
+    padding-top: 35vh;
+    margin-top: 10vh;
+}
+
+.dromedario-new {
+    height: 5vh;
+    width: 18vw;
+    margin-left: 21vw;
+    background-image: url("../img/dromedario.jpg");
+    background-repeat: no-repeat;
+    background-size: 18vw;
+    border: 2px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 100%;
+    padding-top: 30vh;
+}
+
+#charada-resposta-area {
+    margin-top: 10vh;
+    height: auto;
+    width: 20vw;
+    margin-right: 6.6vw;
+    float: right;
+    text-align: center;
+}
+
+#charada-area {
+    height: auto;
+    width: 100%;
+    border: 2px solid white;
+    color: white;
+    text-align: center;
+    padding-top: 1vh;
+    font-size: 3.5vh;
+}
+
+#resposta-area {
+    height: auto;
+    width: 100%;
+}
+
+#resposta-area input{
+    width: 99%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: rgb(254, 222, 145);
+    border-style: dotted;
+    border-color: rgb(255, 253, 248);
+    
+}
+
+h1 {
+    text-align: center;
+}
+
+#infos {
+    height: 12vh;
+    width: 20vw;
+    margin-left: 3.33vw;
+    justify-content: center;
+    text-align: center;
+}
+
+#infos p,
+h1 {
+    margin: 0;
+}
+
+#infos h1 {
+    font-size: 10vh;
+}
+
+#desempenho {
+    border: 1px;
+    border-style: solid;
+    border-color: white;
+    height: auto;
+    width: 50vw;
+    border-radius: 1%;
+    display: flex;
+    margin-left: 5vw;
+    padding: 1vh 1vw 5vh 1vw;
+}
+
+#desempenho p,
+h1 {
+    margin: 0;
+}
+
+.fonte1 {
+    font-family: arabica;
+    text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
+    margin: 0;
+    font-size: 2.5vh;
+    color: white;
+}
+
+.fonte2 {
+    color: rgb(30, 66, 32);
+    font-family: arabica;
+    font-size: 3vh;
+    margin: 0;
+    padding: 0;
+}
+
+.fonte3 {
+    color: rgb(30, 66, 32);
+    font-family: arabica;
+    font-size: 1.5vh;
+    text-align: justify;
+}
+
+.fonte4 {
+    font-family: arabica;
+    text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
+    margin: 0;
+    font-size: 1.25vh;
+    color: white;
+    text-align: justify;
+}
+
+.fonte5 {
+    color: rgb(30, 66, 32);
+    font-family: arabica;
+    font-size: 2vh;
+    margin: 0;
+    padding: 0;
+}
+
+.numero {
+    font-size: 8vh;
+    font-family: numero;
+    margin: 0;
+    padding: 0;
+}
+
+#formulario {
+    border: 1px;
+    border-style: solid;
+    border-color: white;
+    text-align: center;
+    padding: 0.3vw;
+}
+
+#formulario input {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: rgb(254, 222, 145);
+    border-style: dotted;
+    border-color: rgb(255, 253, 248);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.label {
+    width: 20%;
+}
+
+.input {
+    width: 80%;
+}
+
+input {
+    width: 100%;
+}
+
+/*BOTAO PERSONALIZADO*/
+
+button{
+  display: block;
+  width: 100%;
+  height: 5vh;
+  align-items: center;
+  font-size: 18px;
+  font-family: sans-serif;
+  text-decoration: none;
+  background-color: white;
+  color: black;
+  border: 1px solid white;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+  
+}
+
+button span{
+  position: relative;
+  z-index: 2;
+}
+
+button:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: rgb(255, 187, 0);
+  transition: all .35s;
+}
+
+button:hover span {
+    color: white; 
+    transition-delay: 0.35s; 
+    opacity: 1;
+  }
+
+button:hover{
+  color: #fff;
+}
+
+button:hover:after{
+  width: 100%;
+}

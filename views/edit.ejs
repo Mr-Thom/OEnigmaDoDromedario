@@ -1,0 +1,30 @@
+<%- include('./partials/head') %>
+
+    <body>
+        <div id="fundo">
+            <div id="content">
+                <%- include('./partials/header') %>
+                    <div>
+                        <div class="dromedario">
+                            <h1 class="fonte1">"Altera aí!"</h1>
+                        </div>
+                        <div id="edit">
+                            <form method="post" action="/jogadores/<%= jogador.id %>?_method=PATCH">
+                                <h1 class="fonte3">Nome:</h1>
+                                <input name="nome" type="text" value="<%= jogador.nome %>" required>
+                                <br><br>
+                                <h1 class="fonte3">Comentario:</h1>
+                                <input name="comentario" type="text" value="<%= jogador.comentario %>" required>
+                                <br><br><br>
+                                <button>Confirmar</button>
+                                <p>ou</p>
+                                <a href="/jogadores/<%=jogador.id%>"><button>Voltar</button></a>
+                            </form>
+                        </div>
+                    </div>
+                    <%- include('./partials/footer') %>
+            </div>
+        </div>
+    </body>
+
+    </html>

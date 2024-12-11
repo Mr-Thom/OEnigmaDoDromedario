@@ -1,0 +1,42 @@
+<%- include('./partials/head') %>
+
+    <body>
+        <div id="fundo">
+            <div id="content">
+                <%- include('./partials/header') %>
+                    <div>
+                        <div class="dromedario">
+                            <h1 class="fonte1">"Responde essa!"</h1>
+                        </div>
+                        <div id="charada-resposta-area">
+                            <div id="charada-area">
+                                <h1 class="fonte2">Charada</h1>
+                                <p id="charada">
+                                    <%=pergunta%>
+                                </p>
+                            </div>
+                            <div id="resposta-area">
+                                <form action="/game" method="post">
+                                    <input type="hidden" name="gabarito" value="<%=gabarito%>">
+                                    <input type="hidden" name="pergunta" value="<%=pergunta%>">
+                                    <br>
+                                    <input name="resposta" type="text" placeholder="Digite aqui a sua resposta..." autocomplete="off" required>
+                                    <br><br>
+                                    <button>RESPONDER</button>
+                                </form>
+                            </div>
+                            <br>
+                            <p class="fonte5">ACERTOS:
+                            <b class="numero">
+                                <%=pontuacao%>
+                            </b>
+                            </p>
+                        </div>
+                    </div>
+
+                    <%- include('./partials/footer') %>
+            </div>
+        </div>
+    </body>
+
+    </html>
