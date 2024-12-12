@@ -8,7 +8,7 @@ O Enigma Do Dromedário é um jogo Web desenvolvido com a API do Gemini (IA Gene
 - MongoDB
 
 # Como Usar
-1. Baixe todos o repositório.
+1. Baixe todo o repositório.
 2. Abra-o em uma IDE (preferencialmente o Visual Studio Code)
 3. No terminal, dentro do diretório do projeto, escreva o código "npm i", a fim de instalar todos os "node_modules".
 4. Dentro do arquivo "app.js" altere o trecho escrito "INSIRA_SUA_API_KEY_AQUI", localizado na linha 10. Para isso, apague o texto "INSIRA_SUA_API_KEY_AQUI" e substitua por sua API KEY do Gemini.
